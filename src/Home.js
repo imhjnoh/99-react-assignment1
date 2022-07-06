@@ -28,7 +28,7 @@ function Home() {
           marginBottom: "20px",
         }}
       >
-        내 일주일은?
+        일주일 평점
       </h3>
       <Weeks rates={rates} />
       <div
