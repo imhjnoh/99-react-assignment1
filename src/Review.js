@@ -11,20 +11,8 @@ const Review = (props) => {
         setRate(n)
     }
 
-    // useEffect = (() => {
-    //     window.addEventListener("keydown", (e) => {
-    //         console.log(e.key)
-    //         if(e.key*1 > 0 && e.key*1 < 6){
-    //             setRate(e.key*1)
-    //         }
-    //     })
-    // }, [])
-
     const handleKeyDown = (e) => {
         const typed = e.key;
-        // if(typed.match(reg) === null){
-        //     return;
-        // }
         if (typed > 5 || typed < 1) {
             return;
         }
@@ -32,10 +20,10 @@ const Review = (props) => {
         };
         
         useEffect(() => {
-        window.addEventListener("keydown", handleKeyDown);
-        return () => {
-        window.removeEventListener("keydown", handleKeyDown);
-        };
+            window.addEventListener("keydown", handleKeyDown);
+            return () => {
+                window.removeEventListener("keydown", handleKeyDown);
+            };
         }, []);
 
     return (
