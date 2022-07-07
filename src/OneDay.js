@@ -13,7 +13,6 @@ const OneDay = ({ day, rate }) => {
       }}
     >
       <strong style={{ margin: ".5rem" }}>{day}</strong>
-      [null, null, null, null, null]
       {[...Array(5)].map((x, i) => {
         if (i < rate) return <RateCircle key={i} rated></RateCircle>;
         else return <RateCircle key={i}></RateCircle>;
