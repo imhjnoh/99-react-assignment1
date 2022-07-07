@@ -7,10 +7,6 @@ const Review = (props) => {
     const [rate, setRate] = useState(0)
     const day = useParams().day
 
-    const doRate = (n) => {
-        setRate(n)
-    }
-
     const handleKeyDown = (e) => {
         const typed = e.key;
         if (typed > 5 || typed < 1) {

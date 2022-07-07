@@ -1,11 +1,9 @@
-import logo from "./logo.svg";
 import styled from "styled-components";
 import Weeks from "./Weeks";
 import { useState } from "react";
-import { Route } from "react-router-dom";
 
 function Home() {
-  const [rates, setRates] = useState([
+  const rates = [
     { day: "일", rate: Math.floor(Math.random() * 5 + 1) },
     { day: "월", rate: Math.floor(Math.random() * 5 + 1) },
     { day: "화", rate: Math.floor(Math.random() * 5 + 1) },
@@ -13,7 +11,7 @@ function Home() {
     { day: "목", rate: Math.floor(Math.random() * 5 + 1) },
     { day: "금", rate: Math.floor(Math.random() * 5 + 1) },
     { day: "토", rate: Math.floor(Math.random() * 5 + 1) },
-  ]);
+  ];
   const [rateEval, setRateEval] = useState(
     (rates.reduce((acc, x) => acc + x.rate, 0) / 7).toFixed(1)
   );
