@@ -28,7 +28,7 @@ function Home() {
           marginBottom: "20px",
         }}
       >
-        일주일 평점
+        Rate-A-Week
       </h3>
       <Weeks rates={rates} />
       <div
