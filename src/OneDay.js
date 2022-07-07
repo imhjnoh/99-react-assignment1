@@ -2,8 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const OneDay = ({ day, rate }) => {
-  let tmp_day = "금";
-  let tmp_rate = 3;
+  
   return (
     <div
       style={{
@@ -14,6 +13,7 @@ const OneDay = ({ day, rate }) => {
       }}
     >
       <strong style={{ margin: ".5rem" }}>{day}</strong>
+      [null, null, null, null, null]
       {[...Array(5)].map((x, i) => {
         if (i < rate) return <RateCircle key={i} rated></RateCircle>;
         else return <RateCircle key={i}></RateCircle>;
